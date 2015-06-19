@@ -52,8 +52,9 @@ IMAGE_CMD_ubi_append = " \
 	rm -Rf ${IMAGEDIR}; \
 	"
 
-MACHINE_FEATURES += "alsa usbhost wlan kernelwifi extrakernelwifi 3dtv switchoff textlcd osdposition hdmicec"
+MACHINE_FEATURES += "alsa usbhost wlan 3dtv switchoff textlcd osdposition hdmicec"
 
 require conf/machine/include/tune-mips32.inc
+require conf/machine/include/xp-wifi.inc
 
 MACHINE_KERNEL_PR = "r2"
