@@ -24,6 +24,7 @@ SRC_URI += "http://downloads.mutant-digital.net/linux-${PV}.tar.gz \
 	file://0001-bcmgenet.patch \
 	file://add-dmx-source-timecode.patch \
 	file://iosched-slice_idle-1.patch \
+	file://kernel-gcc6.patch \
 	"
 
 inherit kernel machine_kernel_pr
@@ -33,6 +34,7 @@ S = "${WORKDIR}/linux-${PV}"
 export OS = "Linux"
 KERNEL_OBJECT_SUFFIX = "ko"
 KERNEL_OUTPUT = "vmlinux"
+KERNEL_OUTPUT_DIR = "."
 KERNEL_IMAGETYPE = "vmlinux"
 KERNEL_IMAGEDEST = "/tmp"
 
