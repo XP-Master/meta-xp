@@ -47,7 +47,7 @@ IMAGE_CMD_ubi_prepend = " \
 IMAGE_CMD_ubi_append = " \
 	mkdir -p ${IMGDEPLOYDIR}/${IMAGEDIR}; \
 	cp ${IMGDEPLOYDIR}/${IMAGE_NAME}.rootfs.ubi ${IMGDEPLOYDIR}/${IMAGEDIR}/rootfs.bin; \
-	gzip -c ${IMGDEPLOYDIR}/vmlinux-${MACHINE}.bin > ${IMGDEPLOYDIR}/${IMAGEDIR}/kernel.bin; \
+	gzip -c ${DEPLOY_DIR_IMAGE}/vmlinux-${MACHINE}.bin > ${IMGDEPLOYDIR}/${IMAGEDIR}/kernel.bin; \
 	echo "${IMAGEVERSION}" > ${IMGDEPLOYDIR}/${IMAGEDIR}/imageversion; \
 	echo "rename this file to 'force' to force an update without confirmation" > ${IMGDEPLOYDIR}/${IMAGEDIR}/noforce; \
 	cd ${IMGDEPLOYDIR}; \
