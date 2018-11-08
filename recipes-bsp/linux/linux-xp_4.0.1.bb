@@ -27,6 +27,7 @@ SRC_URI += "http://downloads.mutant-digital.net/linux-${PV}.tar.gz \
 	file://improve_the_overall_abi_and_fpu_mode_checks.patch \
 	file://set_o32_default_fpu_flags.patch \
 	file://kernel-gcc6.patch \
+	file://kernel-gcc7.patch \
 	"
 
 inherit kernel machine_kernel_pr
