@@ -28,6 +28,8 @@ SRC_URI += "http://downloads.mutant-digital.net/linux-${PV}.tar.gz \
 	file://set_o32_default_fpu_flags.patch \
 	file://kernel-gcc6.patch \
 	file://kernel-gcc7.patch \
+	file://kernel-gcc8.patch \
+	file://0002-log2-give-up-on-gcc-constant-optimizations.patch \
 	"
 
 inherit kernel machine_kernel_pr
@@ -40,6 +42,8 @@ KERNEL_IMAGETYPE = "vmlinux.gz"
 KERNEL_OUTPUT = "vmlinux.gz"
 KERNEL_OUTPUT_DIR = "."
 KERNEL_IMAGEDEST = "tmp"
+
+KERNEL_EXTRA_ARGS = "EXTRA_CFLAGS=-Wno-attribute-alias"
 
 FILES_kernel-image = "${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}"
 
